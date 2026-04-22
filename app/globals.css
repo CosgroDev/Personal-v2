@@ -200,8 +200,13 @@ input, button, textarea, select {
   border-left: 1px solid var(--border-hair);
 }
 
+.work-grid--2col {
+  grid-template-columns: repeat(2, 1fr);
+}
+
 @media (max-width: 767px) {
-  .work-grid {
+  .work-grid,
+  .work-grid--2col {
     grid-template-columns: 1fr;
   }
 }
