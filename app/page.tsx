@@ -11,17 +11,17 @@ const projects = [
   {
     title: 'Darts Performance Tracker',
     description:
-      'My darts team needed a way to log results and track form over a season. I built an interactive scorer anyone in the team can use after a game. As captain, I use the data to pick the best lineup — same logic I apply at work, different stakes.',
+      'My darts team needed a way to log results and track form over a season. I built an interactive scorer anyone in the team can use after a game. As captain I use the data to pick the best lineup. Same logic as work, different stakes.',
   },
   {
     title: 'Personal AI Assistant',
     description:
-      'I run an OpenClaw build on a Raspberry Pi, connected to WhatsApp. I can text it a question from anywhere and get an answer. Built it because I wanted to understand what was actually happening under the hood — not just hand the question to a black box.',
+      'I run an OpenClaw build on a Raspberry Pi, connected to WhatsApp. I can text it a question from anywhere and get an answer. Built it because I wanted to understand what was actually happening under the hood, not just hand the question to a black box.',
   },
   {
     title: 'Smart Home',
     description:
-      'Gradually automated most of the house over a few years. Less about convenience, more about understanding how the pieces fit together. It\'s the same itch — take a system apart, see what makes it work, put it back together better.',
+      'Gradually automated most of the house over a few years. Less about convenience, more about understanding how the pieces fit together. It\'s the same itch: take a system apart, see what makes it work, put it back together better.',
   },
 ]
 
@@ -33,14 +33,13 @@ export default function Home() {
         <div className="container">
           <p className="eyebrow hero-eyebrow">Food manufacturing&nbsp;&nbsp;·&nbsp;&nbsp;Technology&nbsp;&nbsp;·&nbsp;&nbsp;Darts</p>
           <h1 className="hero-heading">
-            Sixteen years in food<br />
-            manufacturing. The rest<br />
-            of the time I&rsquo;m usually<br />
-            building something.
+            Food manufacturing<br />
+            by trade. Builder<br />
+            by nature.
           </h1>
           <p className="lead hero-lead">
             I&rsquo;m a Projects &amp; Performance Manager in food safety and quality.
-            Outside of work I tinker — home automation, Raspberry Pi projects,
+            Outside of work I tinker: home automation, Raspberry Pi projects,
             apps for things I actually need. If I don&rsquo;t understand how something
             works, I&rsquo;ll take it apart until I do.
           </p>
@@ -74,7 +73,7 @@ export default function Home() {
           <h2 className="section-heading">What I do professionally</h2>
           <div className="prose-block">
             <p>
-              I&rsquo;ve spent 16 years in food manufacturing — starting on the packing
+              I&rsquo;ve spent 16 years in food manufacturing, starting on the packing
               line at minimum wage and working through pretty much every part of
               a food production environment. I&rsquo;ve never forgotten what it&rsquo;s like
               to be at the bottom of the org chart, and I&rsquo;d like to think that shows
@@ -82,7 +81,7 @@ export default function Home() {
             </p>
             <p>
               Today I manage projects and performance within food safety and quality.
-              That means internal processes, best practice, and a lot of data — turning
+              That means internal processes, best practice, and a lot of data. I turn
               numbers into stories that people can actually understand and act on.
               The analysis is secondary to the communication. If the insight doesn&rsquo;t
               land, it doesn&rsquo;t matter how good the data is.
