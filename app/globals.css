@@ -1,0 +1,316 @@
+@import '../tokens.css';
+
+/* ============================================================
+   GLOBAL RESET ADDITIONS
+   ============================================================ */
+*, *::before, *::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+img, picture, video, canvas, svg {
+  display: block;
+  max-width: 100%;
+}
+
+input, button, textarea, select {
+  font: inherit;
+}
+
+/* ============================================================
+   LAYOUT UTILITIES
+   ============================================================ */
+.container {
+  width: 100%;
+  max-width: var(--container-wide);
+  margin-inline: auto;
+  padding-inline: var(--sp-6);
+}
+
+.container--narrow { max-width: var(--container-narrow); }
+.container--text   { max-width: var(--container-text); }
+
+/* ============================================================
+   NAV
+   ============================================================ */
+.nav {
+  background: var(--bg-page);
+  border-bottom: 1px solid var(--border-hair);
+  z-index: 100;
+}
+
+@media (min-width: 768px) {
+  .nav {
+    position: sticky;
+    top: 0;
+  }
+}
+
+.nav-inner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  max-width: var(--container-wide);
+  margin-inline: auto;
+  padding-inline: var(--sp-6);
+  height: 64px;
+}
+
+.nav-wordmark {
+  font-family: var(--font-heading);
+  font-weight: 700;
+  font-size: 18px;
+  letter-spacing: -0.02em;
+  color: var(--color-primary);
+  text-decoration: none;
+  transition: opacity var(--dur-fast) var(--ease-out);
+}
+
+.nav-wordmark:hover {
+  color: var(--color-primary);
+  opacity: 0.75;
+}
+
+.nav-links {
+  display: flex;
+  gap: var(--sp-7);
+  list-style: none;
+}
+
+.nav-links a {
+  font-size: var(--fs-small);
+  font-weight: 500;
+  color: var(--fg-3);
+  text-decoration: none;
+  transition: color var(--dur-fast) var(--ease-out);
+}
+
+.nav-links a:hover {
+  color: var(--color-primary);
+}
+
+@media (max-width: 480px) {
+  .nav-links {
+    gap: var(--sp-5);
+  }
+
+  .nav-links li:last-child {
+    display: none;
+  }
+}
+
+/* ============================================================
+   BUTTONS
+   ============================================================ */
+.btn {
+  display: inline-flex;
+  align-items: center;
+  padding: var(--sp-3) var(--sp-5);
+  font-weight: 600;
+  font-size: var(--fs-small);
+  border-radius: var(--r-1);
+  text-decoration: none;
+  transition: opacity var(--dur-fast) var(--ease-out);
+  cursor: pointer;
+  border: none;
+  line-height: 1;
+}
+
+.btn-primary {
+  background: var(--color-primary);
+  color: var(--paper-00);
+}
+
+.btn-primary:hover {
+  color: var(--paper-00);
+  opacity: 0.85;
+}
+
+.btn-secondary {
+  background: transparent;
+  border: 1px solid var(--color-primary);
+  color: var(--color-primary);
+}
+
+.btn-secondary:hover {
+  color: var(--color-primary);
+  opacity: 0.65;
+}
+
+/* ============================================================
+   HERO
+   ============================================================ */
+.hero {
+  padding-top: var(--sp-10);
+  padding-bottom: var(--sp-10);
+  border-bottom: 1px solid var(--border-hair);
+  overflow: hidden;
+}
+
+.hero-eyebrow {
+  margin-bottom: var(--sp-5);
+}
+
+.hero-heading {
+  font-size: var(--fs-display);
+  margin-bottom: var(--sp-6);
+  max-width: 18ch;
+}
+
+.hero-lead {
+  max-width: 54ch;
+  margin-bottom: var(--sp-7);
+}
+
+.hero-actions {
+  display: flex;
+  gap: var(--sp-4);
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+/* ============================================================
+   SECTIONS
+   ============================================================ */
+.section {
+  padding-block: var(--sp-9);
+  border-bottom: 1px solid var(--border-hair);
+}
+
+.section--raised {
+  background: var(--bg-raised);
+}
+
+.section-eyebrow {
+  margin-bottom: var(--sp-3);
+}
+
+.section-heading {
+  margin-bottom: var(--sp-7);
+}
+
+/* ============================================================
+   WORK GRID
+   ============================================================ */
+.work-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  border-top: 1px solid var(--border-hair);
+  border-left: 1px solid var(--border-hair);
+}
+
+@media (max-width: 767px) {
+  .work-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+.work-card {
+  padding: var(--sp-6);
+  background: var(--bg-surface);
+  border-right: 1px solid var(--border-hair);
+  border-bottom: 1px solid var(--border-hair);
+}
+
+.work-card-title {
+  margin-bottom: var(--sp-4);
+}
+
+.work-card p {
+  font-size: var(--fs-small);
+  color: var(--fg-3);
+  line-height: var(--lh-loose);
+}
+
+/* ============================================================
+   ESSAY LIST
+   ============================================================ */
+.essay-list {
+  list-style: none;
+  border-top: 1px solid var(--border-hair);
+  margin-bottom: var(--sp-6);
+}
+
+.essay-item {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  gap: var(--sp-6);
+  padding-block: var(--sp-5);
+  border-bottom: 1px solid var(--border-hair);
+}
+
+.essay-title-link {
+  font-family: var(--font-heading);
+  font-weight: 600;
+  font-size: var(--fs-h4);
+  letter-spacing: -0.01em;
+  color: var(--color-text);
+  text-decoration: none;
+  transition: color var(--dur-fast) var(--ease-out);
+  line-height: var(--lh-snug);
+}
+
+.essay-title-link:hover {
+  color: var(--color-primary);
+}
+
+.essay-date {
+  font-size: var(--fs-small);
+  color: var(--fg-4);
+  white-space: nowrap;
+  flex-shrink: 0;
+}
+
+.all-writing-link {
+  font-size: var(--fs-small);
+  font-weight: 500;
+}
+
+@media (max-width: 600px) {
+  .essay-item {
+    flex-direction: column;
+    gap: var(--sp-2);
+  }
+}
+
+/* ============================================================
+   FOOTER
+   ============================================================ */
+.footer {
+  padding-block: var(--sp-7);
+}
+
+.footer-inner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  max-width: var(--container-wide);
+  margin-inline: auto;
+  padding-inline: var(--sp-6);
+  flex-wrap: wrap;
+  gap: var(--sp-4);
+}
+
+.footer-copy {
+  font-size: var(--fs-small);
+  color: var(--fg-4);
+}
+
+.footer-links {
+  display: flex;
+  gap: var(--sp-6);
+  list-style: none;
+}
+
+.footer-links a {
+  font-size: var(--fs-small);
+  color: var(--fg-3);
+  text-decoration: none;
+  transition: color var(--dur-fast) var(--ease-out);
+}
+
+.footer-links a:hover {
+  color: var(--color-primary);
+}
