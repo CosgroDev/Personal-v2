@@ -276,6 +276,32 @@ input, button, textarea, select {
 }
 
 /* ============================================================
+   PROSE BLOCK (day job section)
+   ============================================================ */
+.prose-block {
+  display: flex;
+  flex-direction: column;
+  gap: var(--sp-5);
+}
+
+.prose-block p {
+  font-size: var(--fs-lead);
+  line-height: var(--lh-loose);
+  color: var(--fg-2);
+}
+
+/* ============================================================
+   WRITING EMPTY STATE
+   ============================================================ */
+.writing-empty {
+  color: var(--fg-3);
+  font-size: var(--fs-lead);
+  line-height: var(--lh-loose);
+  margin-bottom: var(--sp-6);
+  max-width: 52ch;
+}
+
+/* ============================================================
    FOOTER
    ============================================================ */
 .footer {
