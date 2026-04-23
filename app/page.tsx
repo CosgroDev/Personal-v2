@@ -70,7 +70,7 @@ export default function Home() {
             works, I&rsquo;ll take it apart until I do.
           </p>
           <div className="hero-actions">
-            <Link href="/about" className="btn btn-primary">About me</Link>
+            <Link href="#background" className="btn btn-primary">Background</Link>
             <Link href="/writing" className="btn btn-secondary">Read the blog</Link>
           </div>
         </div>
@@ -109,7 +109,7 @@ export default function Home() {
       </section>
 
       {/* ── Background ── */}
-      <section className="section">
+      <section className="section" id="background">
         <div className="container container--narrow">
           <p className="eyebrow section-eyebrow">Background</p>
           <h2 className="section-heading">Who I am</h2>

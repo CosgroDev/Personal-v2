@@ -9,7 +9,6 @@ export default function Nav() {
         </Link>
         <nav aria-label="Primary navigation">
           <ul className="nav-links">
-            <li><Link href="/about">about</Link></li>
             <li><Link href="/writing">writing</Link></li>
             <li><Link href="/cv">cv</Link></li>
             <li><Link href="/work-together">work together</Link></li>
