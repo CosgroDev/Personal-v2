@@ -165,9 +165,10 @@ const skills = [
 ]
 
 const certifications = [
-  { grade: 'Distinction',    title: 'Food Safety Level 4', issuer: 'Highfield', date: 'Jul 2021' },
-  { grade: 'Certification',  title: 'BRCGS Lead Auditor',  issuer: 'BRCGS',     date: 'Feb 2021' },
-  { grade: 'Certification',  title: 'HACCP Level 4',        issuer: 'Highfield', date: 'Nov 2020' },
+  { grade: 'Distinction',    title: 'Food Safety Level 4',      issuer: 'Highfield', date: 'Jul 2021' },
+  { grade: 'Certification',  title: 'BRCGS Lead Auditor',        issuer: 'BRCGS',     date: 'Feb 2021' },
+  { grade: 'Certification',  title: 'HACCP Level 4',             issuer: 'Highfield', date: 'Nov 2020' },
+  { grade: 'Certification',  title: 'Implementing FSSC 22000',   issuer: '',          date: 'Apr 2026' },
 ]
 
 const education = [
@@ -315,7 +316,9 @@ export default function CVPage() {
               <div key={cert.title} className="cert-card">
                 <p className="eyebrow cert-grade">{cert.grade}</p>
                 <h3 className="cert-title">{cert.title}</h3>
-                <p className="cert-meta">{cert.issuer}&nbsp;·&nbsp;{cert.date}</p>
+                <p className="cert-meta">
+                  {cert.issuer ? <>{cert.issuer}&nbsp;·&nbsp;</> : null}{cert.date}
+                </p>
               </div>
             ))}
           </div>
