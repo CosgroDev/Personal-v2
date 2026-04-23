@@ -168,7 +168,7 @@ const certifications = [
   { grade: 'Distinction',    title: 'Food Safety Level 4',      issuer: 'Highfield', date: 'Jul 2021' },
   { grade: 'Certification',  title: 'BRCGS Lead Auditor',        issuer: 'BRCGS',     date: 'Feb 2021' },
   { grade: 'Certification',  title: 'HACCP Level 4',             issuer: 'Highfield', date: 'Nov 2020' },
-  { grade: 'Certification',  title: 'Implementing FSSC 22000',   issuer: '',          date: 'Apr 2026' },
+  { grade: 'Certification',  title: 'Implementing FSSC 22000',   issuer: 'NSF',       date: 'Apr 2026' },
 ]
 
 const education = [
@@ -190,7 +190,7 @@ export default function CVPage() {
   return (
     <>
       {/* ── Header ── */}
-      <section className="page-hero paper-grain">
+      <section className="page-hero paper-grain" id="top">
         <div className="container">
           <p className="eyebrow page-hero-eyebrow">Curriculum Vitae</p>
           <h1 className="cv-name">Dale Cosgrove</h1>
@@ -200,8 +200,22 @@ export default function CVPage() {
         </div>
       </section>
 
+      {/* ── Section nav ── */}
+      <nav className="cv-section-nav" aria-label="Jump to section">
+        <div className="container">
+          <ul className="cv-section-nav-list">
+            <li><a href="#profile">Profile</a></li>
+            <li><a href="#timeline">Timeline</a></li>
+            <li><a href="#experience">Experience</a></li>
+            <li><a href="#skills">Skills</a></li>
+            <li><a href="#certifications">Certifications</a></li>
+            <li><a href="#education">Education</a></li>
+          </ul>
+        </div>
+      </nav>
+
       {/* ── Profile ── */}
-      <section className="section">
+      <section className="section" id="profile">
         <div className="container container--narrow">
           <p className="eyebrow section-eyebrow">Profile</p>
           <h2 className="section-heading">Summary</h2>
@@ -230,7 +244,7 @@ export default function CVPage() {
       </section>
 
       {/* ── Career Timeline ── */}
-      <section className="section section--raised">
+      <section className="section section--raised" id="timeline">
         <div className="container container--text">
           <p className="eyebrow section-eyebrow">Timeline</p>
           <h2 className="section-heading">Career history</h2>
@@ -249,7 +263,7 @@ export default function CVPage() {
       </section>
 
       {/* ── Experience ── */}
-      <section className="section">
+      <section className="section" id="experience">
         <div className="container container--text">
           <p className="eyebrow section-eyebrow">Experience</p>
           <h2 className="section-heading">Roles in full</h2>
@@ -287,7 +301,7 @@ export default function CVPage() {
       </section>
 
       {/* ── Skills ── */}
-      <section className="section section--raised">
+      <section className="section section--raised" id="skills">
         <div className="container">
           <p className="eyebrow section-eyebrow">Skills</p>
           <h2 className="section-heading">Areas of expertise</h2>
@@ -307,7 +321,7 @@ export default function CVPage() {
       </section>
 
       {/* ── Certifications ── */}
-      <section className="section">
+      <section className="section" id="certifications">
         <div className="container">
           <p className="eyebrow section-eyebrow">Certifications</p>
           <h2 className="section-heading">Qualifications</h2>
@@ -326,7 +340,7 @@ export default function CVPage() {
       </section>
 
       {/* ── Education ── */}
-      <section className="section section--raised">
+      <section className="section section--raised" id="education">
         <div className="container container--text">
           <p className="eyebrow section-eyebrow">Education</p>
           <h2 className="section-heading">Academic background</h2>
@@ -341,6 +355,13 @@ export default function CVPage() {
           </ul>
         </div>
       </section>
+
+      {/* ── Back to top ── */}
+      <div className="cv-back-top">
+        <div className="container">
+          <a href="#top">Back to top &uarr;</a>
+        </div>
+      </div>
     </>
   )
 }

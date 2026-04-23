@@ -478,6 +478,65 @@ input, button, textarea, select {
   color: var(--fg-3);
 }
 
+/* Section nav */
+.cv-section-nav {
+  background: var(--bg-page);
+  border-bottom: 1px solid var(--border-hair);
+}
+
+@media (min-width: 768px) {
+  .cv-section-nav {
+    position: sticky;
+    top: 64px;
+    z-index: 99;
+  }
+}
+
+.cv-section-nav-list {
+  display: flex;
+  align-items: center;
+  gap: var(--sp-6);
+  list-style: none;
+  padding-block: var(--sp-4);
+  overflow-x: auto;
+  scrollbar-width: none;
+}
+
+.cv-section-nav-list::-webkit-scrollbar {
+  display: none;
+}
+
+.cv-section-nav-list a {
+  font-size: var(--fs-small);
+  font-weight: 500;
+  color: var(--fg-3);
+  text-decoration: none;
+  white-space: nowrap;
+  transition: color var(--dur-fast) var(--ease-out);
+}
+
+.cv-section-nav-list a:hover {
+  color: var(--color-primary);
+}
+
+/* Back to top */
+.cv-back-top {
+  padding-block: var(--sp-7);
+  border-top: 1px solid var(--border-hair);
+}
+
+.cv-back-top a {
+  font-size: var(--fs-small);
+  font-weight: 500;
+  color: var(--fg-3);
+  text-decoration: none;
+  transition: color var(--dur-fast) var(--ease-out);
+}
+
+.cv-back-top a:hover {
+  color: var(--color-primary);
+}
+
 /* Timeline */
 .cv-timeline {
   list-style: none;
