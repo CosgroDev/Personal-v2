@@ -462,3 +462,212 @@ input, button, textarea, select {
 .footer-links a:hover {
   color: var(--color-primary);
 }
+
+/* ============================================================
+   CV PAGE
+   ============================================================ */
+
+/* Header */
+.cv-name {
+  font-size: var(--fs-h1);
+  margin-bottom: var(--sp-4);
+}
+
+.cv-current-role {
+  font-size: var(--fs-lead);
+  color: var(--fg-3);
+}
+
+/* Timeline */
+.cv-timeline {
+  list-style: none;
+  border-top: 1px solid var(--border-hair);
+}
+
+.cv-timeline-item {
+  display: flex;
+  gap: var(--sp-7);
+  padding-block: var(--sp-5);
+  border-bottom: 1px solid var(--border-hair);
+}
+
+.cv-timeline-date {
+  min-width: 200px;
+  flex-shrink: 0;
+  font-size: var(--fs-small);
+  font-weight: 600;
+  color: var(--fg-4);
+  padding-top: 3px;
+}
+
+.cv-timeline-info {
+  display: flex;
+  flex-direction: column;
+  gap: var(--sp-1);
+}
+
+.cv-timeline-role {
+  font-family: var(--font-heading);
+  font-weight: 600;
+  font-size: var(--fs-h4);
+  letter-spacing: var(--ls-heading);
+  color: var(--color-primary);
+}
+
+.cv-timeline-company {
+  font-size: var(--fs-small);
+  color: var(--fg-3);
+}
+
+/* Experience */
+.cv-roles {
+  border-top: 1px solid var(--border-hair);
+}
+
+.cv-role {
+  padding-block: var(--sp-7);
+  border-bottom: 1px solid var(--border-hair);
+}
+
+.cv-role-title {
+  margin-bottom: var(--sp-3);
+}
+
+.cv-role-meta {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  margin-bottom: var(--sp-5);
+  font-size: var(--fs-small);
+  color: var(--fg-3);
+}
+
+.cv-role-meta-sep {
+  color: var(--fg-4);
+}
+
+.cv-role-desc {
+  margin-bottom: var(--sp-5);
+  color: var(--fg-2);
+}
+
+.cv-achievements {
+  list-style: none;
+  margin-bottom: var(--sp-5);
+}
+
+.cv-achievements li {
+  display: flex;
+  gap: var(--sp-3);
+  font-size: var(--fs-small);
+  line-height: var(--lh-loose);
+  padding-bottom: var(--sp-2);
+}
+
+.cv-achievement-arrow {
+  color: var(--color-accent);
+  flex-shrink: 0;
+  font-weight: 600;
+}
+
+.cv-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--sp-2);
+}
+
+.cv-tag {
+  font-size: var(--fs-micro);
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: var(--ls-eyebrow);
+  color: var(--color-muted);
+  background: var(--color-soft);
+  padding: var(--sp-1) var(--sp-3);
+  border-radius: var(--r-pill);
+}
+
+/* Skills */
+.skills-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+  gap: var(--sp-7);
+}
+
+.skills-group-title {
+  margin-bottom: var(--sp-4);
+}
+
+.skills-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--sp-2);
+}
+
+/* Certifications */
+.cert-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  border-top: 1px solid var(--border-hair);
+  border-left: 1px solid var(--border-hair);
+}
+
+.cert-card {
+  padding: var(--sp-6);
+  border-right: 1px solid var(--border-hair);
+  border-bottom: 1px solid var(--border-hair);
+  background: var(--bg-surface);
+}
+
+.cert-grade {
+  margin-bottom: var(--sp-3);
+}
+
+.cert-title {
+  margin-bottom: var(--sp-3);
+}
+
+.cert-meta {
+  font-size: var(--fs-small);
+  color: var(--fg-4);
+}
+
+/* Education */
+.edu-list {
+  list-style: none;
+  border-top: 1px solid var(--border-hair);
+}
+
+.edu-item {
+  padding-block: var(--sp-6);
+  border-bottom: 1px solid var(--border-hair);
+}
+
+.edu-type {
+  margin-bottom: var(--sp-3);
+}
+
+.edu-title {
+  margin-bottom: var(--sp-2);
+}
+
+.edu-meta {
+  font-size: var(--fs-small);
+  color: var(--fg-3);
+}
+
+/* Responsive */
+@media (max-width: 767px) {
+  .cv-timeline-item {
+    flex-direction: column;
+    gap: var(--sp-2);
+  }
+
+  .cv-timeline-date {
+    min-width: unset;
+  }
+
+  .cert-grid {
+    grid-template-columns: 1fr;
+  }
+}
