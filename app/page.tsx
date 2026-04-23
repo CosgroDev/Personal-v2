@@ -1,5 +1,6 @@
 import type { Metadata } from 'next'
 import Link from 'next/link'
+import { getAllPosts, formatDate } from '@/lib/posts'
 
 export const metadata: Metadata = {
   title: 'Dale Cosgrove',
@@ -49,6 +50,7 @@ const sideProjects = [
 ]
 
 export default function Home() {
+  const latestPosts = getAllPosts().slice(0, 3)
   return (
     <>
       {/* ── Hero ── */}
@@ -144,10 +146,25 @@ export default function Home() {
         <div className="container container--text">
           <p className="eyebrow section-eyebrow">Writing</p>
           <h2 className="section-heading">From the blog</h2>
-          <p className="writing-empty">
-            First post coming soon. I&rsquo;ll write about the things I&rsquo;m working on,
-            things I&rsquo;ve learned, and the occasional opinion on food, tech, or darts.
-          </p>
+          {latestPosts.length > 0 ? (
+            <ol className="essay-list">
+              {latestPosts.map((post) => (
+                <li key={post.slug} className="essay-item">
+                  <Link href={`/writing/${post.slug}`} className="essay-title-link">
+                    {post.title}
+                  </Link>
+                  <time className="essay-date" dateTime={post.date}>
+                    {formatDate(post.date)}
+                  </time>
+                </li>
+              ))}
+            </ol>
+          ) : (
+            <p className="writing-empty">
+              First post coming soon. I&rsquo;ll write about the things I&rsquo;m working on,
+              things I&rsquo;ve learned, and the occasional opinion on food, tech, or darts.
+            </p>
+          )}
           <Link href="/writing" className="all-writing-link">
             See all posts&nbsp;&rarr;
           </Link>
